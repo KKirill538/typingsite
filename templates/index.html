@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Тренажер слепой печати (Flask)</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>TypingPro <small>(Flask)</small></h1>
+        </header>
+
+        <main class="typing-area">
+            <div class="stats">
+                <div class="stat-item">
+                    <span class="label">WPM:</span>
+                    <span id="wpm">0</span>
+                </div>
+                <div class="stat-item">
+                    <span class="label">Точность:</span>
+                    <span id="accuracy">100%</span>
+                </div>
+                <div class="stat-item">
+                    <span class="label">Время:</span>
+                    <span id="timer">0s</span>
+                </div>
+            </div>
+
+            <div id="text-to-type" class="text-display">
+            </div>
+
+            <input type="text" id="text-input" class="input-field" autofocus autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+
+            <div class="controls">
+                <button id="reset-button">Сброс</button>
+            </div>
+            </main>
+
+        <footer>
+            <p>&copy; 2025 TypingPro (Flask). Все права защищены.</p>
+        </footer>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
